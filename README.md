@@ -17,6 +17,8 @@ Just another Roman numerals converter, input a number and get a Roman numeral st
 </script>
 ```
 
+p.s. this converter only handle numbers from 1 to 4999 at the moment
+
 ---
 
 ##License
