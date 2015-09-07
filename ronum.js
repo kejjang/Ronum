@@ -78,7 +78,7 @@ Ronum.prototype.convNumberToRoman = function(num){
 Ronum.prototype.convRomanToNumber = function(num){
     var valid = this.validRom(num);
     if(false === valid){
-        return 'not a valid roman';
+        return 'not a valid roman numeral';
     }else if(valid === 999){
         return 'the number you give is too big or too small';
     }
@@ -96,17 +96,15 @@ Ronum.prototype.convRomanToNumber = function(num){
                     valid2 = false;
                 }
             }else{
-                for(var j = 0; j < i; j++){
-                    if(digits[j] == digits[i] * -1){
-                        valid2 = false;
-                    }
+                if(digits.indexOf(digits[i] * -1) > -1){
+                    valid2 = false;
                 }
             }
         }
     }
 
     if(false === valid2){
-        return 'not a valid roman';
+        return 'not a valid roman numeral';
     }
     return digits.sum();
 }
